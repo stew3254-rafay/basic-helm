@@ -1,7 +1,11 @@
 # Default values for busybox.
 # This is a YAML-formatted file.
 # Declare variables to be passed into your templates.
+namespace: testing
+createNamespace: true
 replicaCount: 1
+tolerations:
+  - operator: "Exists"
 image:
   repository: busybox
   tag: latest
