@@ -1,7 +1,14 @@
 # Default values for busybox.
 # This is a YAML-formatted file.
 # Declare variables to be passed into your templates.
-namespace: testing
+#
+# testingNamespace is a fixed, separate namespace this chart always creates
+# (e.g. for cluster sanity checks). It is NOT where the deployment/service
+# run - those always deploy into the release namespace (.Release.Namespace),
+# which Rafay sets to whatever namespace is selected when the addon is
+# deployed. This lets the addon create "testing" while still landing the
+# workload wherever Rafay points it.
+testingNamespace: testing
 createNamespace: true
 replicaCount: 1
 tolerations:
