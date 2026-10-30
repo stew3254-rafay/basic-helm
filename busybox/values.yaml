@@ -10,7 +10,7 @@
 # workload wherever Rafay points it.
 testingNamespace: testing
 createNamespace: true
-replicaCount: 2
+replicaCount: 1
 tolerations:
   - operator: "Exists"
 image:
